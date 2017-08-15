@@ -1,0 +1,26 @@
+{
+    "name": "65816-assembly",
+    "displayName": "65816 Assembly",
+    "description": "Syntax Highlighting for SNES 65816 Assembly",
+    "version": "0.0.1",
+    "publisher": "joshneta",
+    "engines": {
+        "vscode": "^1.15.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "assembly",
+            "aliases": ["65816 Assembly", "assembly"],
+            "extensions": [".asm",".inc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "assembly",
+            "scopeName": "source.asm.65816",
+            "path": "./syntaxes/65816.tmLanguage"
+        }]
+    }
+}
