@@ -1,4 +1,4 @@
-# 65816-assembly README
+# Visual Studio Code (xkas) 65816 assembly syntax highlighting extension
 
 This is an extension for Visual Studio Code to add syntax highlighting support for xkas style 65816 assembly.
 
