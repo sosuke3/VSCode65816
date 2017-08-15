@@ -25,7 +25,7 @@
 			<key>match</key>
 			<string>[\s]:[\s]</string>
 			<key>name</key>
-			<string>command.concatenate</string>
+			<string>keyword.xkas.command.concatenate</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -33,7 +33,7 @@
 			<key>match</key>
 			<string>\b(defaultslot|slotsize|slot|id|name|slowrom|lorom|hirom|cartridgetype|romsize|sramsize|country|licenseecode|version|cop|brk|abort|nmi|irq|reset|irqbrk|semifree|header_off|force|DEFAULTSLOT|SLOTSIZE|SLOT|ID|NAME|SLOWROM|LOROM|HIROM|CARTRIDGETYPE|ROMSIZE|SRAMSIZE|COUNTRY|LICENSEECODE|VERSION|COP|BRK|ABORT|NMI|IRQ|RESET|IRQBRK|SEMIFREE|HEADER_OFF|FORCE)\b</string>
 			<key>name</key>
-			<string>keyword.snes</string>
+			<string>keyword.xkas.snes</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -53,11 +53,11 @@
 		</dict> -->
 		<dict>
 			<key>comment</key>
-			<string>Label</string>
+			<string>Label Reference</string>
 			<key>name</key>
-			<string>keyword.xkas.branch.label</string>
+			<string>xkas.branch.label</string>
 			<key>match</key>
-			<string>\b(BCC|BCS|BEQ|BMI|BNE|BPL|BRA|BRL|BVC|BVS|JMP|JML|JSR|JSL)\b[\s]*([a-zA-Z0-9_\\@]+)</string>
+			<string>\b(BCC|BCS|BEQ|BMI|BNE|BPL|BRA|BRL|BVC|BVS|JMP|JML|JSR|JSL)\b[\s]+([a-zA-Z0-9_\\@]+)</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -68,7 +68,28 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>string.label.reference</string>
+					<string>label.xkas.label.reference</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Sub-Label Reference</string>
+			<key>name</key>
+			<string>label.xkas.subbranch.label</string>
+			<key>match</key>
+			<string>\b(BCC|BCS|BEQ|BMI|BNE|BPL|BRA|BRL|BVC|BVS|JMP|JML|JSR|JSL)\b[\s]+([\.][a-zA-Z0-9_\\@]+)</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.mnemonic</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>label.xkas.sublabel.reference</string>
 				</dict>
 			</dict>
 		</dict>
@@ -86,7 +107,7 @@
 			<key>match</key>
 			<string>\b(assume|base|cleartable|db|dd|dl|dw|endmacro|export|fill|fillbyte|fsave|header|hirom|import|incbin|incbin_table|incsrc|loadpc|lorom|macro name|namespace|org|pad|padbyte|print|savepc|skip|table|warnpc|ASSUME|BASE|CLEARTABLE|DB|DD|DL|DW|ENDMACRO|EXPORT|FILL|FILLBYTE|FSAVE|HEADER|HIROM|IMPORT|INCBIN|INCBIN_TABLE|INCSRC|LOADPC|LOROM|MACRO NAME|NAMESPACE|ORG|PAD|PADBYTE|PRINT|SAVEPC|SKIP|TABLE|WARNPC)\b</string>
 			<key>name</key>
-			<string>keyword.asm</string>
+			<string>keyword.xkas.asm</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -94,7 +115,7 @@
 			<key>match</key>
 			<string>\b(a|x|y|A|X|Y)\b</string>
 			<key>name</key>
-			<string>storage.register</string>
+			<string>variable.xkas.storage.register</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -102,7 +123,7 @@
 			<key>match</key>
 			<string>[\#?[$|%]|$|\\][a-zA-Z0-9_:\\]*</string>
 			<key>name</key>
-			<string>constant.numeric.asm</string>
+			<string>constant.xkas.numeric.asm</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -110,7 +131,7 @@
 			<key>match</key>
 			<string>\b[0-9]+\b</string>
 			<key>name</key>
-			<string>constant.numeric.dec</string>
+			<string>constant.xkas.numeric.dec</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -118,7 +139,7 @@
 			<key>match</key>
 			<string>^[\s]*([a-zA-Z0-9_\\@]*):</string>
 			<key>name</key>
-			<string>string.label</string>
+			<string>label.xkas.label</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -126,16 +147,16 @@
 			<key>match</key>
 			<string>^[\.]([a-zA-Z0-9_\\@]*)</string>
 			<key>name</key>
-			<string>string.sublabel</string>
+			<string>label.xkas.sublabel</string>
 		</dict>
-		<dict>
+		<!-- <dict>
 			<key>comment</key>
 			<string>Sub-Label Reference</string>
 			<key>match</key>
 			<string>[\.]([a-zA-Z0-9_\\@]*)</string>
 			<key>name</key>
-			<string>string.sublabel.reference</string>
-		</dict>
+			<string>label.xkas.sublabel.reference</string>
+		</dict> -->
 		<dict>
 			<key>comment</key>
 			<string>String</string>

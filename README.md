@@ -6,6 +6,9 @@ Since this is just a .tmLanguage file it should work fine in textmate and other 
 
 ## Installation
 
+### Visual Studio Code Extension Marketplace
+You can find this extension on the marketplace by searching for ```65816 Assembly```
+
 ### Manual Installation
 
 Copy the files to a new folder in your vscode extensions directory (I recommend ```65816-assembly```). See Microsoft's documentation [https://code.visualstudio.com/docs/extensions/yocode#_your-extensions-folder](https://code.visualstudio.com/docs/extensions/yocode#_your-extensions-folder) for platform specific locations.
@@ -14,19 +17,23 @@ Copy the files to a new folder in your vscode extensions directory (I recommend 
 
 The following scopes are defined and can have custom coloring and styling applied (see suggestion below). You can set these in your User Configuation using the ```editor.tokenColorCustomization``` setting added in vscode 1.15.0:
 ```
-comment.line
-command.concatenate
-keyword.snes
+keyword.xkas.command.concatenate
+keyword.xkas.snes
 keyword.xkas.define
+label.xkas.label.reference
+label.xkas.sublabel.reference
+keyword.xkas.asm
+variable.xkas.storage.register
+constant.xkas.numeric.asm
+constant.xkas.numeric.dec
+label.xkas.label
+label.xkas.sublabel
+```
+
+The following are also used, but changing them will impact other languages:
+```
+comment.line
 keyword.mnemonic
-keyword.asm
-storage.register
-constant.numeric.asm
-constant.numeric.dec
-string.label
-string.label.reference
-string.sublabel
-string.sublabel.reference
 string.quoted.double
 string.quoted.single
 ```
@@ -39,44 +46,73 @@ I suggest you add the following to your User Settings file for some initial sane
     "editor.tokenColorCustomizations":{
         "textMateRules": [
             {
-                "scope": "constant.numeric.asm",
+                "scope": "keyword.xkas.command.concatenate",
                 "settings": {
-                    "foreground": "#000000"
+                    "foreground": "#848484"
                 }
             },
             {
-                "scope": "string.sublabel.reference",
+                "scope": "keyword.xkas.snes",
                 "settings": {
-                    "foreground": "#FFAC3D",
-                    "fontStyle": "italic"
+                    "foreground": "#0000FF"
                 }
             },
             {
-                "scope": "string.sublabel",
+                "scope": "keyword.xkas.asm",
                 "settings": {
-                    "foreground": "#FFAC3D",
-                    "fontStyle": "bold"
-                }
-            },
-            {
-                "scope": "string.label.reference",
-                "settings": {
-                    "foreground": "#A40000",
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": "string.label",
-                "settings": {
-                    "foreground": "#A40000",
-                    "fontStyle": "bold"
+                    "foreground": "#0000FF"
                 }
             },
             {
                 "scope": "keyword.xkas.define",
                 "settings": {
-                    //"foreground": "#AA5E07",
+                    "foreground": "#0000FF"
+                }
+            },
+            {
+                "scope": "constant.xkas.numeric.asm",
+                "settings": {
+                    "foreground": "#000000"
+                }
+            },
+            {
+                "scope": "constant.xkas.numeric.dec",
+                "settings": {
+                    "foreground": "#000000"
+                }
+            },
+            {
+                "scope": "label.xkas.sublabel.reference",
+                "settings": {
+                    "foreground": "#FFAC3D",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "label.xkas.sublabel",
+                "settings": {
+                    "foreground": "#FFAC3D",
                     "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "label.xkas.label.reference",
+                "settings": {
+                    "foreground": "#A40000",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "label.xkas.label",
+                "settings": {
+                    "foreground": "#A40000",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "variable.xkas.storage.register",
+                "settings": {
+                    "foreground": "#3CB3FD"
                 }
             }
         ]
