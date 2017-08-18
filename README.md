@@ -24,8 +24,10 @@ label.xkas.label.reference
 label.xkas.sublabel.reference
 keyword.xkas.asm
 variable.xkas.storage.register
-constant.xkas.numeric.asm
-constant.xkas.numeric.dec
+constant.xkas.numeric.hexvalue
+constant.xkas.numeric.decvalue
+constant.xkas.numeric.binvalue
+constant.xkas.numeric.address
 label.xkas.label
 label.xkas.sublabel
 ```
@@ -70,15 +72,27 @@ I suggest you add the following to your User Settings file for some initial sane
                 }
             },
             {
-                "scope": "constant.xkas.numeric.asm",
+                "scope": "constant.xkas.numeric.hexvalue",
+                "settings": {
+                    "foreground": "#0000B6"
+                }
+            },
+            {
+                "scope": "constant.xkas.numeric.decvalue",
                 "settings": {
                     "foreground": "#000000"
                 }
             },
             {
-                "scope": "constant.xkas.numeric.dec",
+                "scope": "constant.xkas.numeric.binvalue",
                 "settings": {
-                    "foreground": "#000000"
+                    "foreground": "#8C0909"
+                }
+            },
+            {
+                "scope": "constant.xkas.numeric.address",
+                "settings": {
+                    "foreground": "#9811DD"
                 }
             },
             {
