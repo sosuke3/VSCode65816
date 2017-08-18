@@ -121,9 +121,33 @@
 			<key>comment</key>
 			<string>Value</string>
 			<key>match</key>
-			<string>[\#?[$|%]|$|\\][a-zA-Z0-9_:\\]*</string>
+			<string>[^#]\$[a-zA-Z0-9]+</string>
 			<key>name</key>
-			<string>constant.xkas.numeric.asm</string>
+			<string>constant.xkas.numeric.address</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Hex Value</string>
+			<key>match</key>
+			<string>#\$[a-zA-Z0-9]+</string>
+			<key>name</key>
+			<string>constant.xkas.numeric.hexvalue</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Hex Value</string>
+			<key>match</key>
+			<string>#[a-zA-Z0-9]+</string>
+			<key>name</key>
+			<string>constant.xkas.numeric.decvalue</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Hex Value</string>
+			<key>match</key>
+			<string>%[a-zA-Z0-9]+</string>
+			<key>name</key>
+			<string>constant.xkas.numeric.binvalue</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -145,7 +169,7 @@
 			<key>comment</key>
 			<string>Sub-Label</string>
 			<key>match</key>
-			<string>^[\.]([a-zA-Z0-9_\\@]*)</string>
+			<string>^[\s]*[\.]([a-zA-Z0-9_\\@]*)</string>
 			<key>name</key>
 			<string>label.xkas.sublabel</string>
 		</dict>
