@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.0.4
+- Added macro keyword
+
 ## 0.0.3
 - Split numeric values into address, hex, decimal, and binary so each can be highlighted a different color
 

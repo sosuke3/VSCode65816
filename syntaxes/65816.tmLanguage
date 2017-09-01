@@ -105,7 +105,7 @@
 			<key>comment</key>
 			<string>Preprocessor</string>
 			<key>match</key>
-			<string>\b(assume|base|cleartable|db|dd|dl|dw|endmacro|export|fill|fillbyte|fsave|header|hirom|import|incbin|incbin_table|incsrc|loadpc|lorom|macro name|namespace|org|pad|padbyte|print|savepc|skip|table|warnpc|ASSUME|BASE|CLEARTABLE|DB|DD|DL|DW|ENDMACRO|EXPORT|FILL|FILLBYTE|FSAVE|HEADER|HIROM|IMPORT|INCBIN|INCBIN_TABLE|INCSRC|LOADPC|LOROM|MACRO NAME|NAMESPACE|ORG|PAD|PADBYTE|PRINT|SAVEPC|SKIP|TABLE|WARNPC)\b</string>
+			<string>\b(assume|base|cleartable|db|dd|dl|dw|macro|endmacro|export|fill|fillbyte|fsave|header|hirom|import|incbin|incbin_table|incsrc|loadpc|lorom|macro name|namespace|org|pad|padbyte|print|savepc|skip|table|warnpc|ASSUME|BASE|CLEARTABLE|DB|DD|DL|DW|MACRO|ENDMACRO|EXPORT|FILL|FILLBYTE|FSAVE|HEADER|HIROM|IMPORT|INCBIN|INCBIN_TABLE|INCSRC|LOADPC|LOROM|MACRO NAME|NAMESPACE|ORG|PAD|PADBYTE|PRINT|SAVEPC|SKIP|TABLE|WARNPC)\b</string>
 			<key>name</key>
 			<string>keyword.xkas.asm</string>
 		</dict>
